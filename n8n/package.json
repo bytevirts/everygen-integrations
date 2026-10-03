@@ -21,7 +21,8 @@
     "directory": "n8n"
   },
   "files": [
-    "dist"
+    "dist",
+    "examples"
   ],
   "scripts": {
     "build": "n8n-node build",

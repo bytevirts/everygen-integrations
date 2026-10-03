@@ -1,0 +1,20 @@
+{
+  "name": "Everygen — Receive completed images and videos",
+  "nodes": [
+    {
+      "id": "completed",
+      "name": "Everygen Trigger",
+      "type": "n8n-nodes-everygen.everygenTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "parameters": {
+        "event": "generationCompleted",
+        "kind": "all",
+        "pollTimes": { "item": [{ "mode": "everyMinute" }] }
+      }
+    }
+  ],
+  "connections": {},
+  "settings": { "executionOrder": "v1" },
+  "active": false
+}

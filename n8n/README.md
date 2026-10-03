@@ -40,7 +40,7 @@ rate only when dispatch starts. An over-limit quote starts nothing.
 Use the trigger to continue when media is ready, or use a Wait node before Get
 Generation. The completed feed includes website-created media in the same
 account. A `needs_attention` response requires checking the original ID, not
-starting another copy. See [API reference](../API.md).
+starting another copy. See the [API reference](https://github.com/bytevirts/everygen-integrations/blob/main/API.md).
 
 ## Development
 
@@ -51,3 +51,17 @@ Package contents contain no runtime external dependencies beyond host-provided
 repository's GitHub Actions workflow with npm provenance; then request review
 in the n8n Creator Portal. Never store OAuth or npm secrets in node parameters,
 source files or workflow exports.
+
+## Test before npm publication
+
+The release handoff includes `n8n-nodes-everygen-0.1.0.tgz`. For a self-hosted
+instance, install that archive in the instance’s community-node directory, then
+restart n8n. For a conventional installation this is `~/.n8n/nodes`; create
+the directory if needed and run `npm install /absolute/path/to/n8n-nodes-everygen-0.1.0.tgz`
+there. Use the container’s persistent n8n volume for Docker. Select the installed
+Everygen nodes and connect your own credential. This archive cannot be installed
+into n8n Cloud.
+
+Import [check-account.json](https://github.com/bytevirts/everygen-integrations/blob/main/n8n/examples/check-account.json)
+for a read-only connection check, or [completed-media.json](https://github.com/bytevirts/everygen-integrations/blob/main/n8n/examples/completed-media.json)
+for the completion trigger. Both start inactive and contain no credentials.

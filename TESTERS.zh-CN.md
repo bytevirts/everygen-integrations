@@ -18,7 +18,7 @@ Zapier 和 n8n 共用你自己的 Everygen 账号和积分。开发版试用与�
 
 ## n8n
 
-首版以 n8n 2.41.6 / Node.js 24 为联调目标。npm 发布后，自托管实例在 Community Nodes 安装 n8n-nodes-everygen；n8n Cloud 要等官方验证通过。
+首版以 n8n 2.41.6 / Node.js 24 为联调目标。目前提供 n8n-nodes-everygen-0.1.0.tgz，可按包内 README 在自托管实例安装。npm 发布后再通过 Community Nodes 搜索安装；n8n Cloud 要等官方验证通过。
 
 新增 Everygen OAuth2 API 凭据，登录自己的 Everygen 账号。服务器回调需要 HTTPS 和默认 /rest/oauth2-credential/callback 路径；本地开发可用 HTTP localhost。填写 Request ID、Prompt、Max Credits 后执行 Everygen 节点。用 Everygen Trigger 等完成，或 Wait 后 Get Generation。
 
