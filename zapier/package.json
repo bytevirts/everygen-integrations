@@ -1,0 +1,22 @@
+{
+  "name": "everygen-zapier",
+  "version": "1.0.0",
+  "description": "Everygen image and video automation for Zapier",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "validate": "zapier-platform validate",
+    "push": "zapier-platform push"
+  },
+  "dependencies": {
+    "zapier-platform-core": "19.1.0"
+  },
+  "devDependencies": {
+    "zapier-platform-cli": "19.1.0"
+  }
+}

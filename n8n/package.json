@@ -1,0 +1,50 @@
+{
+  "name": "n8n-nodes-everygen",
+  "version": "0.1.0",
+  "description": "Create AI images and videos with Everygen in n8n workflows",
+  "keywords": [
+    "n8n-community-node-package",
+    "everygen",
+    "ai",
+    "image",
+    "video"
+  ],
+  "license": "MIT",
+  "homepage": "https://everygen-ai.com",
+  "author": {
+    "name": "Everygen",
+    "email": "everygenai@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bytevirts/everygen-integrations.git",
+    "directory": "n8n"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "n8n-node build",
+    "lint": "n8n-node lint",
+    "test": "node --test test/*.test.cjs",
+    "dev": "n8n-node dev"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/EverygenOAuth2Api.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Everygen/Everygen.node.js",
+      "dist/nodes/Everygen/EverygenTrigger.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "0.50.4",
+    "n8n-workflow": "2.16.0",
+    "typescript": "^5.9.3"
+  }
+}
